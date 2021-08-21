@@ -19,14 +19,20 @@
   </head>
   <body>
     <main class="md:flex pl-8 md:pl-2">
-      <!-- macbookpro image section -->
+      <!-- ******************** 
+        MACBOOK IMAGE SECTION
+      ******************** -->
       <section class="flex-1 mr-8">
         <img src="images/mac-book-pro.png" alt="mack book pro" />
       </section>
 
-      <!-- description,  calculation section -->
+      <!-- ******************** 
+        PRICING, CONFIGURATION SECTION
+      ******************** -->
       <section class="flex-1 space-y-12">
-        <!-- mac book pro description -->
+        <!-- ************* 
+          DESCRIPTION
+        ************* -->
         <article class="space-y-4">
           <h1 class="text-5xl font-semibold">
             Customize your Blue 24-inch iMac with Apple M1 chip.
@@ -39,7 +45,9 @@
           </p>
         </article>
 
-        <!-- mac book pro configuration -->
+        <!-- ************* 
+          CONFIGURATION
+        ************* -->
         <div id="configuration" class="space-y-8">
           <!-- memory -->
           <div id="memory" class="space-y-4">
@@ -141,8 +149,10 @@
           </div>
         </div>
 
-        <!-- pricing -->
-        <section class="w-2/3 space-y-7">
+        <!-- ************* 
+          PRICING
+        ************* -->
+        <article class="w-2/3 space-y-7">
           <!-- best price -->
           <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
             <div class="pb-3">Best Price</div>
@@ -174,9 +184,11 @@
             <div class="pb-4">Total Price</div>
             <div class="pb-4">$<span id="total-price">1299</span></div>
           </div>
-        </section>
+        </article>
 
-        <!-- promo code -->
+        <!-- ************* 
+          PROMO CODE
+        ************* -->
         <div class="space-y-4">
           <h3 class="text-3xl font-semibold">Add Promo code</h3>
           <input
@@ -193,6 +205,7 @@
             type="text"
             placeholder="coupon code"
           />
+          <!-- promo code apply button -->
           <button
             id="apply-btn"
             class="
@@ -207,6 +220,7 @@
           >
             Apply
           </button>
+          <!-- wrong message -->
           <p
             id="wrong-message"
             class="
