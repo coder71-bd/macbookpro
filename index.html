@@ -40,9 +40,9 @@
         </article>
 
         <!-- mac book pro configuration -->
-        <div class="space-y-8">
+        <div id="configuration" class="space-y-8">
           <!-- memory -->
-          <div class="space-y-4">
+          <div id="memory" class="space-y-4">
             <h2 class="text-3xl font-semibold">Memory</h2>
             <button
               class="
@@ -71,7 +71,7 @@
           </div>
 
           <!-- storage -->
-          <div class="space-y-4">
+          <div id="storage" class="space-y-4">
             <h2 class="text-3xl font-semibold">Storage</h2>
             <button
               class="
@@ -112,7 +112,7 @@
           </div>
 
           <!-- delivery options -->
-          <div class="space-y-4">
+          <div id="delivery" class="space-y-4">
             <h2 class="text-3xl font-semibold">Choose your delivery option</h2>
             <button
               class="
@@ -146,19 +146,19 @@
           <!-- best price -->
           <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
             <div class="pb-3">Best Price</div>
-            <div class="pb-3">$<span>1299</span></div>
+            <div class="pb-3">$<span id="best-price">1299</span></div>
           </div>
 
           <!-- extra memory cost -->
           <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
             <div class="pb-3">Extra Memory Cost</div>
-            <div class="pb-3">$<span>0</span></div>
+            <div class="pb-3">$<span id="extra-memory-cost">0</span></div>
           </div>
 
           <!-- extra storage cost -->
           <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
             <div class="pb-4">Extra Storage Cost</div>
-            <div class="pb-4">$<span>0</span></div>
+            <div class="pb-4">$<span id="extra-storage-cost">0</span></div>
           </div>
 
           <!-- delivery charge -->
@@ -166,13 +166,13 @@
             class="flex justify-between border-b-4 border-black text-3xl mb-4"
           >
             <div class="pb-4">Delivery charge</div>
-            <div class="pb-4">$<span>0</span></div>
+            <div class="pb-4">$<span id="delivery-charge">0</span></div>
           </div>
 
           <!-- total price -->
           <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
             <div class="pb-4">Total Price</div>
-            <div class="pb-4">$<span>1299</span></div>
+            <div class="pb-4">$<span id="total-price">1299</span></div>
           </div>
         </section>
 
@@ -180,6 +180,7 @@
         <div class="space-y-4">
           <h3 class="text-3xl font-semibold">Add Promo code</h3>
           <input
+            id="promo-code"
             class="
               text-2xl
               border-2
@@ -192,7 +193,18 @@
             type="text"
             placeholder="coupon code"
           />
-          <button class="text-xl bg-red-700 px-6 py-3 rounded-md text-white">
+          <button
+            id="apply-btn"
+            class="
+              text-xl
+              bg-red-700
+              hover:bg-red-400
+              px-6
+              py-3
+              rounded-md
+              text-white
+            "
+          >
             Apply
           </button>
         </div>
@@ -200,7 +212,7 @@
     </main>
 
     <footer class="text-center mt-8">
-      <p class="text-4xl">Total: $<span>1299</span></p>
+      <p class="text-4xl">Total: $<span id="footer-total">1299</span></p>
     </footer>
     <script src="js/main.js"></script>
   </body>
