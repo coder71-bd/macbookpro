@@ -18,7 +18,190 @@
     />
   </head>
   <body>
-    <h1>hello world</h1>
+    <main class="md:flex pl-8 md:pl-2">
+      <!-- macbookpro image section -->
+      <section class="flex-1 mr-8">
+        <img src="images/mac-book-pro.png" alt="mack book pro" />
+      </section>
+
+      <!-- description,  calculation section -->
+      <section class="flex-1 space-y-12">
+        <!-- mac book pro description -->
+        <article class="space-y-4">
+          <h1 class="text-5xl font-semibold">
+            Customize your Blue 24-inch iMac with Apple M1 chip.
+          </h1>
+          <p class="text-xl">
+            Apple M1 chip with 8-core CPU with 4 performance cores and 4
+            efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB unified
+            memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic Mouse
+            Magic Keyboard - US English
+          </p>
+        </article>
+
+        <!-- mac book pro configuration -->
+        <div class="space-y-8">
+          <!-- memory -->
+          <div class="space-y-4">
+            <h2 class="text-3xl font-semibold">Memory</h2>
+            <button
+              class="
+                border
+                text-lg
+                p-3
+                rounded-md
+                border-indigo-600
+                hover:bg-black hover:text-white
+              "
+            >
+              8GB unified memory
+            </button>
+            <button
+              class="
+                border
+                text-lg
+                p-3
+                rounded-md
+                border-indigo-600
+                hover:bg-black hover:text-white
+              "
+            >
+              16GB unified memory
+            </button>
+          </div>
+
+          <!-- storage -->
+          <div class="space-y-4">
+            <h2 class="text-3xl font-semibold">Storage</h2>
+            <button
+              class="
+                border
+                text-lg
+                p-3
+                rounded-md
+                border-indigo-600
+                hover:bg-black hover:text-white
+              "
+            >
+              256GB SSD storage
+            </button>
+            <button
+              class="
+                border
+                text-lg
+                p-3
+                rounded-md
+                border-indigo-600
+                hover:bg-black hover:text-white
+              "
+            >
+              512GB SSD storage
+            </button>
+            <button
+              class="
+                border
+                text-lg
+                p-3
+                rounded-md
+                border-indigo-600
+                hover:bg-black hover:text-white
+              "
+            >
+              1TB SSD storage
+            </button>
+          </div>
+
+          <!-- delivery options -->
+          <div class="space-y-4">
+            <h2 class="text-3xl font-semibold">Choose your delivery option</h2>
+            <button
+              class="
+                border
+                text-lg
+                p-3
+                rounded-md
+                border-indigo-600
+                hover:bg-black hover:text-white
+              "
+            >
+              Friday, Aug 25 Free Prime Delivery
+            </button>
+            <button
+              class="
+                border
+                text-lg
+                p-3
+                rounded-md
+                border-indigo-600
+                hover:bg-black hover:text-white
+              "
+            >
+              Friday, Aug 21 Delivery charge $20
+            </button>
+          </div>
+        </div>
+
+        <!-- pricing -->
+        <section class="w-2/3 space-y-7">
+          <!-- best price -->
+          <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
+            <div class="pb-3">Best Price</div>
+            <div class="pb-3">$<span>1299</span></div>
+          </div>
+
+          <!-- extra memory cost -->
+          <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
+            <div class="pb-3">Extra Memory Cost</div>
+            <div class="pb-3">$<span>0</span></div>
+          </div>
+
+          <!-- extra storage cost -->
+          <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
+            <div class="pb-4">Extra Storage Cost</div>
+            <div class="pb-4">$<span>0</span></div>
+          </div>
+
+          <!-- delivery charge -->
+          <div
+            class="flex justify-between border-b-4 border-black text-3xl mb-4"
+          >
+            <div class="pb-4">Delivery charge</div>
+            <div class="pb-4">$<span>0</span></div>
+          </div>
+
+          <!-- total price -->
+          <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
+            <div class="pb-4">Total Price</div>
+            <div class="pb-4">$<span>1299</span></div>
+          </div>
+        </section>
+
+        <!-- promo code -->
+        <div class="space-y-4">
+          <h3 class="text-3xl font-semibold">Add Promo code</h3>
+          <input
+            class="
+              text-2xl
+              border-2
+              rounded-md
+              border-blue-200
+              focus:border-blue-600
+              p-3
+              outline-none
+            "
+            type="text"
+            placeholder="coupon code"
+          />
+          <button class="text-xl bg-red-700 px-6 py-3 rounded-md text-white">
+            Apply
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center mt-8">
+      <p class="text-4xl">Total: $<span>1299</span></p>
+    </footer>
     <script src="js/main.js"></script>
   </body>
 </html>
