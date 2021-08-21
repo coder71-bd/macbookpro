@@ -14,6 +14,7 @@ const totalPrice = document.getElementById('total-price');
 /* *** PROMO CODE VARIABLES *** */
 const applyBtn = document.getElementById('apply-btn');
 const promoCode = document.getElementById('promo-code');
+const wrongMessage = document.getElementById('wrong-message');
 
 /* *** FOOTER VARIABLES *** */
 const footerTotal = document.getElementById('footer-total');
@@ -88,6 +89,7 @@ function calculateTotal() {
 
   //set the total in price list
   totalPrice.innerText = total;
+  footerTotal.innerText = total;
 }
 
 /* *** HANDLE DIFFERENT CONFIGURATION FUNCTION *** */
@@ -113,15 +115,24 @@ configuration.addEventListener('click', handleConfiguration);
 
 /* *** PROMO CODE APPLYER FUNCTION *** */
 function applyPromoCode() {
-  promoCodeValue = promoCode.value;
+  promoCodeValue = promoCode.value.toLowerCase();
 
   //promo code has to be 'stevekaku'
-  if (promoCode.value === 'stevekaku') {
+  if (promoCodeValue === 'stevekaku') {
     totalPriceNum = parseInt(totalPrice.innerText);
-    const discount = 20 / 100; //20% discount
-    const totalPriceAfterDiscount = totalPriceNum - totalPriceNum * discount;
+    const discountPercent = 20 / 100; //20% discount
+    const discountAmount = totalPriceNum * discountPercent;
+    const totalPriceAfterDiscount = totalPriceNum - discountAmount;
     footerTotal.innerText = totalPriceAfterDiscount;
     promoCode.value = ''; //clear the input field after applying
+  } else {
+    //show wrong message
+    wrongMessage.classList.remove('hidden');
+    // hide the wrong message
+    setTimeout(function () {
+      wrongMessage.classList.add('hidden');
+      promoCode.value = '';
+    }, 1000);
   }
 }
 
