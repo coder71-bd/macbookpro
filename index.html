@@ -17,231 +17,249 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <main class="md:flex pl-8 md:pl-2">
+  <body class="grid lg:grid-cols-2 m-4">
+    <!-- HEADER -->
+    <header class="flex flex-col">
+      <!-- macbook image -->
+      <img
+        class="xl:w-3/4 mx-auto"
+        src="images/mac-book-pro.png"
+        alt="mack book pro"
+      />
+      <h2 class="text-3xl text-center font-semibold">Macbook Pro</h2>
+    </header>
+
+    <!-- MAIN -->
+    <main class="space-y-12 ml-12 lg:mt-0 mt-12">
       <!-- ******************** 
-        MACBOOK IMAGE SECTION
+              DESCRIPTION
       ******************** -->
-      <section class="flex-1 mr-8">
-        <img src="images/mac-book-pro.png" alt="mack book pro" />
+      <section class="space-y-4">
+        <h1 class="text-5xl font-semibold">
+          Customize your
+          <span class="text-blue-900">Blue 24-inch iMac</span> with Apple M1
+          chip.
+        </h1>
+
+        <p class="text-xl">
+          Apple M1 chip with 8-core CPU with 4 performance cores and 4
+          efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB unified
+          memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic Mouse
+          Magic Keyboard - US English
+        </p>
       </section>
 
       <!-- ******************** 
-        PRICING, CONFIGURATION SECTION
+            CONFIGURATION
       ******************** -->
-      <section class="flex-1 space-y-12">
-        <!-- ************* 
-          DESCRIPTION
-        ************* -->
-        <article class="space-y-4">
-          <h1 class="text-5xl font-semibold">
-            Customize your Blue 24-inch iMac with Apple M1 chip.
-          </h1>
-          <p class="text-xl">
-            Apple M1 chip with 8-core CPU with 4 performance cores and 4
-            efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB unified
-            memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic Mouse
-            Magic Keyboard - US English
-          </p>
-        </article>
+      <section id="configuration" class="space-y-8">
+        <!-- memory -->
+        <div id="memory" class="space-y-4">
+          <h2 class="text-3xl font-semibold">Memory</h2>
 
-        <!-- ************* 
-          CONFIGURATION
-        ************* -->
-        <div id="configuration" class="space-y-8">
-          <!-- memory -->
-          <div id="memory" class="space-y-4">
-            <h2 class="text-3xl font-semibold">Memory</h2>
-            <button
-              class="
-                border
-                text-lg
-                p-3
-                rounded-md
-                border-indigo-600
-                hover:bg-black hover:text-white
-              "
-            >
-              8GB unified memory
-            </button>
-            <button
-              class="
-                border
-                text-lg
-                p-3
-                rounded-md
-                border-indigo-600
-                hover:bg-black hover:text-white
-              "
-            >
-              16GB unified memory
-            </button>
-          </div>
-
-          <!-- storage -->
-          <div id="storage" class="space-y-4">
-            <h2 class="text-3xl font-semibold">Storage</h2>
-            <button
-              class="
-                border
-                text-lg
-                p-3
-                rounded-md
-                border-indigo-600
-                hover:bg-black hover:text-white
-              "
-            >
-              256GB SSD storage
-            </button>
-            <button
-              class="
-                border
-                text-lg
-                p-3
-                rounded-md
-                border-indigo-600
-                hover:bg-black hover:text-white
-              "
-            >
-              512GB SSD storage
-            </button>
-            <button
-              class="
-                border
-                text-lg
-                p-3
-                rounded-md
-                border-indigo-600
-                hover:bg-black hover:text-white
-              "
-            >
-              1TB SSD storage
-            </button>
-          </div>
-
-          <!-- delivery options -->
-          <div id="delivery" class="space-y-4">
-            <h2 class="text-3xl font-semibold">Choose your delivery option</h2>
-            <button
-              class="
-                border
-                text-lg
-                p-3
-                rounded-md
-                border-indigo-600
-                hover:bg-black hover:text-white
-              "
-            >
-              Friday, Aug 25 Free Prime Delivery
-            </button>
-            <button
-              class="
-                border
-                text-lg
-                p-3
-                rounded-md
-                border-indigo-600
-                hover:bg-black hover:text-white
-              "
-            >
-              Friday, Aug 21 Delivery charge $20
-            </button>
-          </div>
-        </div>
-
-        <!-- ************* 
-          PRICING
-        ************* -->
-        <article class="w-2/3 space-y-7">
-          <!-- best price -->
-          <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
-            <div class="pb-3">Best Price</div>
-            <div class="pb-3">$<span id="best-price">1299</span></div>
-          </div>
-
-          <!-- extra memory cost -->
-          <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
-            <div class="pb-3">Extra Memory Cost</div>
-            <div class="pb-3">$<span id="extra-memory-cost">0</span></div>
-          </div>
-
-          <!-- extra storage cost -->
-          <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
-            <div class="pb-4">Extra Storage Cost</div>
-            <div class="pb-4">$<span id="extra-storage-cost">0</span></div>
-          </div>
-
-          <!-- delivery charge -->
-          <div
-            class="flex justify-between border-b-4 border-black text-3xl mb-4"
-          >
-            <div class="pb-4">Delivery charge</div>
-            <div class="pb-4">$<span id="delivery-charge">0</span></div>
-          </div>
-
-          <!-- total price -->
-          <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
-            <div class="pb-4">Total Price</div>
-            <div class="pb-4">$<span id="total-price">1299</span></div>
-          </div>
-        </article>
-
-        <!-- ************* 
-          PROMO CODE
-        ************* -->
-        <div class="space-y-4">
-          <h3 class="text-3xl font-semibold">Add Promo code</h3>
-          <input
-            id="promo-code"
-            class="
-              text-2xl
-              border-2
-              rounded-md
-              border-blue-200
-              focus:border-blue-600
-              p-3
-              outline-none
-            "
-            type="text"
-            placeholder="coupon code"
-          />
-          <!-- promo code apply button -->
+          <!-- 8GB memory -->
           <button
-            id="apply-btn"
             class="
+              border
               text-xl
-              bg-red-700
-              hover:bg-red-400
-              px-6
-              py-3
+              p-3
               rounded-md
-              text-white
+              border-indigo-600
+              hover:bg-black hover:text-white
             "
           >
-            Apply
+            8GB unified memory
           </button>
-          <!-- wrong message -->
-          <p
-            id="wrong-message"
+
+          <!-- 16GB memory -->
+          <button
             class="
-              hidden
-              bg-red-900
-              w-72
-              text-center text-white
-              py-1
-              font-semibold
-              italic
+              border
+              text-xl
+              p-3
+              rounded-md
+              border-indigo-600
+              hover:bg-black hover:text-white
             "
           >
-            wrong promo code
-          </p>
+            16GB unified memory
+          </button>
         </div>
+
+        <!-- storage -->
+        <div id="storage" class="space-y-4">
+          <h2 class="text-3xl font-semibold">Storage</h2>
+
+          <!-- 256GB storage -->
+          <button
+            class="
+              border
+              text-xl
+              p-3
+              rounded-md
+              border-indigo-600
+              hover:bg-black hover:text-white
+            "
+          >
+            256GB SSD storage
+          </button>
+
+          <!-- 512GB storage -->
+          <button
+            class="
+              border
+              text-xl
+              p-3
+              rounded-md
+              border-indigo-600
+              hover:bg-black hover:text-white
+            "
+          >
+            512GB SSD storage
+          </button>
+
+          <!-- 1TB storage -->
+          <button
+            class="
+              border
+              text-lg
+              p-3
+              rounded-md
+              border-indigo-600
+              hover:bg-black hover:text-white
+            "
+          >
+            1TB SSD storage
+          </button>
+        </div>
+
+        <!-- delivery options -->
+        <div id="delivery" class="space-y-4">
+          <h2 class="text-3xl font-semibold">Choose your delivery option</h2>
+
+          <!-- free delivery -->
+          <button
+            class="
+              border
+              text-xl
+              p-3
+              rounded-md
+              border-indigo-600
+              hover:bg-black hover:text-white
+            "
+          >
+            Friday, Aug 25 Free Prime Delivery
+          </button>
+
+          <!-- premium delvery -->
+          <button
+            class="
+              border
+              text-xl
+              p-3
+              rounded-md
+              border-indigo-600
+              hover:bg-black hover:text-white
+            "
+          >
+            Friday, Aug 21 Delivery charge $20
+          </button>
+        </div>
+      </section>
+
+      <!-- ******************** 
+              PRICING
+      ******************** -->
+      <section class="w-2/3 space-y-7">
+        <!-- best price -->
+        <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
+          <h4 class="pb-3">Best Price</h4>
+          <p class="pb-3">$<span id="best-price">1299</span></p>
+        </div>
+
+        <!-- extra memory cost -->
+        <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
+          <h4 class="pb-3">Extra Memory Cost</h4>
+          <p class="pb-3">$<span id="extra-memory-cost">0</span></p>
+        </div>
+
+        <!-- extra storage cost -->
+        <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
+          <h4 class="pb-4">Extra Storage Cost</h4>
+          <p class="pb-4">$<span id="extra-storage-cost">0</span></p>
+        </div>
+
+        <!-- delivery charge -->
+        <div class="flex justify-between border-b-4 border-black text-3xl mb-4">
+          <h4 class="pb-4">Delivery charge</h4>
+          <p class="pb-4">$<span id="delivery-charge">0</span></p>
+        </div>
+
+        <!-- total price -->
+        <div class="flex justify-between border-b-2 border-gray-300 text-3xl">
+          <h4 class="pb-4">Total Price</h4>
+          <p class="pb-4">$<span id="total-price">1299</span></p>
+        </div>
+      </section>
+
+      <!-- ******************** 
+              PROMO CODE
+      ******************** -->
+      <section class="space-y-4">
+        <h3 class="text-3xl font-semibold">Add Promo code</h3>
+        <input
+          id="promo-code"
+          class="
+            text-2xl
+            border-2
+            rounded-md
+            border-blue-200
+            focus:border-blue-600
+            p-3
+            outline-none
+          "
+          type="text"
+          placeholder="coupon code"
+        />
+        <!-- promo code apply button -->
+        <button
+          id="apply-btn"
+          class="
+            text-xl
+            bg-red-700
+            hover:bg-red-400
+            px-6
+            py-3
+            rounded-md
+            text-white
+          "
+        >
+          Apply
+        </button>
+        <!-- wrong message -->
+        <p
+          id="wrong-message"
+          class="
+            hidden
+            bg-red-900
+            w-72
+            text-center text-white
+            py-1
+            font-semibold
+            italic
+          "
+        >
+          wrong promo code
+        </p>
       </section>
     </main>
 
-    <footer class="text-center mt-8">
+    <!-- FOOTER -->
+    <footer class="text-center col-span-full mt-10">
       <p class="text-4xl">Total: $<span id="footer-total">1299</span></p>
     </footer>
+
+    <!-- external javascript file -->
     <script src="js/main.js"></script>
   </body>
 </html>

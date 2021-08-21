@@ -49,7 +49,8 @@ function highlightBtn(targetElem) {
 }
 
 /* *** PRICE ADDER FUNCTION *** */
-function addPrice(targetElem) {
+function showPrice(targetElem) {
+  //change the price list based on different buttons
   switch (targetElem.innerText) {
     case '8GB unified memory':
       extraMemoryCost.innerText = '0';
@@ -78,10 +79,10 @@ function addPrice(targetElem) {
 /* *** TOTAL PRICE CALCULATOR FUNCTION *** */
 function calculateTotal() {
   //all configuration prices in number
-  bestPriceNum = parseInt(bestPrice.innerText);
-  extraMemoryCostNum = parseInt(extraMemoryCost.innerText);
-  extraStorageCostNum = parseInt(extraStorageCost.innerText);
-  deliveryChargeNum = parseInt(deliveryCharge.innerText);
+  const bestPriceNum = parseInt(bestPrice.innerText);
+  const extraMemoryCostNum = parseInt(extraMemoryCost.innerText);
+  const extraStorageCostNum = parseInt(extraStorageCost.innerText);
+  const deliveryChargeNum = parseInt(deliveryCharge.innerText);
 
   //total price
   const total =
@@ -103,8 +104,8 @@ function handleConfiguration(e) {
   //highlight the target button
   highlightBtn(target);
 
-  // add price in the list
-  addPrice(target);
+  // show price in pricing list
+  showPrice(target);
 
   //calculate total price
   calculateTotal();
@@ -115,18 +116,22 @@ configuration.addEventListener('click', handleConfiguration);
 
 /* *** PROMO CODE APPLYER FUNCTION *** */
 function applyPromoCode() {
-  promoCodeValue = promoCode.value.toLowerCase();
+  // store promo code given from user
+  const promoCodeValue = promoCode.value.toLowerCase();
 
   //promo code has to be 'stevekaku'
   if (promoCodeValue === 'stevekaku') {
-    totalPriceNum = parseInt(totalPrice.innerText);
+    const totalPriceNum = parseInt(totalPrice.innerText);
+    //calculate discount
     const discountPercent = 20 / 100; //20% discount
     const discountAmount = totalPriceNum * discountPercent;
     const totalPriceAfterDiscount = totalPriceNum - discountAmount;
+
+    //set the total price in footerTotal
     footerTotal.innerText = totalPriceAfterDiscount;
     promoCode.value = ''; //clear the input field after applying
   } else {
-    //show wrong message
+    //show the wrong message
     wrongMessage.classList.remove('hidden');
     // hide the wrong message
     setTimeout(function () {
